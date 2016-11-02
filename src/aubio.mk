@@ -7,7 +7,7 @@ $(PKG)_CHECKSUM := 1cc58e0fed2b9468305b198ad06b889f228b797a082c2ede716dc30fcb4f8
 $(PKG)_SUBDIR   := aubio-$($(PKG)_VERSION)
 $(PKG)_FILE     := aubio-$($(PKG)_VERSION).tar.bz2
 $(PKG)_URL      := http://www.aubio.org/pub/$($(PKG)_FILE)
-$(PKG)_DEPS     := gcc ffmpeg fftw jack libsamplerate libsndfile waf
+$(PKG)_DEPS     := gcc ffmpeg_git fftw jack libsamplerate libsndfile waf
 
 define $(PKG)_UPDATE
     $(WGET) -q -O- 'http://www.aubio.org/download' | \
